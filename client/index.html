@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Warena</title>
+
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <script src="../server/node_modules/socket.io/client-dist/socket.io.js"></script>
+    <script defer type="module" src="./scripts/main.js"></script>
+  </head>
+
+  <body>
+    <div id="area-home" class="area active">
+      <h1>Warena</h1>
+
+      <button id="btn-start">Starten</button>
+      <button id="btn-leave">Verlassen</button>
+    </div>
+
+    <div id="area-choose" class="area">
+      <h2>Modus wählen</h2>
+
+      <button id="btn-multiplayer">Quick-Join</button>
+      <button id="btn-private">Privat</button>
+      <button id="btn-choose-return">Zurück</button>
+    </div>
+
+    <div id="area-private" class="area">
+      <h2>Raum wählen</h2>
+
+      <button id="btn-create">Raum erstellen</button>
+      <button id="btn-join">Raum beitreten</button>
+      <button id="btn-private-return">Zurück</button>
+    </div>
+
+    <div id="area-create" class="area">
+      <h2>Freunde einladen</h2>
+
+      <code>#</code>
+
+      <ul id="list-friends"></ul>
+
+      <div id="color-choices"></div>
+
+      <button id="btn-room-start">Spielen</button>
+      <button id="btn-room-leave">Verlassen</button>
+    </div>
+
+    <div id="area-joining" class="area">
+      <h2>Raum beitreten...</h2>
+    </div>
+
+    <div id="area-game" class="area">
+      <canvas></canvas>
+
+      <div id="transition"></div>
+      <div id="hud-top-left"></div>
+      <div id="hud-bottom-left"></div>
+
+      <button id="btn-game-leave">Verlassen</button>
+    </div>
+  </body>
+</html>

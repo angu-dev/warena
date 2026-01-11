@@ -1,0 +1,79 @@
+@use "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Jersey";
+  font-size: 20px;
+}
+
+body {
+  background-color: variables.$black;
+  color: variables.$white;
+}
+
+.area {
+  &:not(.active) {
+    display: none;
+  }
+
+  #color-choices {
+    button {
+      height: 50px;
+      width: 50px;
+      border: none;
+
+      &[disabled] {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  #btn-game-leave {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    padding: 10px 20px;
+    background: variables.$black;
+    color: variables.$white;
+    border: 2px solid variables.$white;
+    cursor: pointer;
+    font-size: 18px;
+
+    &:hover {
+      background: variables.$white;
+      color: variables.$black;
+    }
+  }
+
+  #hud-top-left {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: variables.$white;
+    z-index: 10;
+    background: variables.$black;
+    padding: 10px;
+    min-height: 20px; // Nur anzeigen wenn Content da ist
+
+    &:empty {
+      display: none; // Verstecken wenn leer
+    }
+  }
+
+  #hud-bottom-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 18px;
+    z-index: 10;
+    background: variables.$black;
+    padding: 10px;
+  }
+}
